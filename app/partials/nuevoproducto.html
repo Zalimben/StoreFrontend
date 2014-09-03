@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+        <h2> Añadir Producto </h2>
+        <form name="form" novalidate class="form-horizontal" role="form" ng-submit="add(product)">
+            <div class="form-group">
+              <label for="id" class="col-sm-2 control-label ">Identificador</label>
+              <div class="col-sm-10">
+                <input type="number" ng-model="product.productId" class="form-control" id="id" placeholder="Inserte identificador"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="description" class="col-sm-2 control-label ">Descripcion de Producto</label>
+              <div class="col-sm-10">
+                <input type="text" ng-model="product.description" class="form-control" id="description" placeholder="Inserte nombre del nuevo cliente"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="purchaseCost" class="col-sm-2 control-label ">Precio</label>
+              <div class="col-sm-10">
+                <input type="number" ng-model="product.purchaseCost" class="form-control" id="purchaseCost" placeholder="Inserte una dirección domiciliaria"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="quantityOnHand" class="col-sm-2 control-label ">Cantidad Disponible</label>
+              <div class="col-sm-10">
+                <input type="number" ng-model="product.quantityOnHand" class="form-control" id="quantityOnHand" placeholder="Inserte ciudad"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="manufactuerId" class="col-sm-2 control-label ">Proveedor</label>
+              <div class="col-sm-10">
+                <select ng-model="product.manufacturerId" id="manufactuerId" class="form-control" ng-options="onemanufacturer.name for onemanufacturer in allmanufacturers"> </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" class="btn btn-primary" value="Save"/>
+              </div>
+            </div>
+         </form>
+    </div>
+    </body>
+</html>

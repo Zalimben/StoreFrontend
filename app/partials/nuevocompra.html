@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h2> Nueva Compra </h2>   
+        <form class="form-horizontal" role="form" ng-submit="add(purchase)">
+            <div class="form-group">
+              <label for="productId" class="col-sm-2 control-label">Producto</label>
+              <div class="col-sm-10">
+                <select ng-model="purchase.productId" class="form-control" ng-options="oneproduct.description for oneproduct in allproducts" placeholder="Identificador del Producto"> </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="quantity" class="col-sm-2 control-label">Cantidad</label>
+              <div class="col-sm-10">
+                <input type="number" ng-model="purchase.quantity" class="form-control" id="quantity" placeholder="Inserte datos"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" class="btn btn-primary" value="Save"/>
+              </div>
+            </div>
+        </form>
+        <p> <b> Proveedor: </b><span ng-bind="purchase.productId.manufacturerId.name" > </span> <br> </p>
+        <p> <b> Precio Total: </b> <span ng-bind="purchase.quantity * purchase.productId.productId.purchaseCost"> </span> <br> </p>
+        
+    </div>
+    </body>
+</html>

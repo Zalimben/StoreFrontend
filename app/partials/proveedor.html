@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Proveedores</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+    <h2> Proveedores </h2>
+    <p>
+        Filtrar:  <input type="text" ng-model="manufacturerfilter"/>
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>Representante</th>
+            <th>Proveedor</th>
+        </tr>
+        <tr ng-repeat="onefactory in allmanufacturers | filter:manufacturerfilter" 
+            ng-click="showSelectedElement(onefactory)"
+            ng-class-even="'even'"
+            ng-class-odd="'odd'"
+            >
+            <td>{{onefactory.rep}}</td>
+            <td>{{onefactory.name}}</td>
+        </tr>
+    </table>
+</body>
+</html>

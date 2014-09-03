@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        
+    </head>
+    <body>
+        <div>
+            <h2> Lista de Pagos </h2>
+            <p>
+                Filtrar:  <input type="text" ng-model="manufacturerfilter"/>
+            </p>
+            <br><br>
+            <table class="table">
+                <tr>
+                    <th>Id</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Monto</th>
+                </tr>
+                <tr ng-repeat="onepaid in allpaids | filter:manufacturerfilter" 
+                    ng-click="showSelectedElement(onefactory)"
+                    ng-class-even="'even'"
+                    ng-class-odd="'odd'"
+                    >
+                    <td>{{onepaid.orderNum}}</td>
+                    <td>{{onepaid.customerId.name}}</td>
+                    <td>{{onepaid.date}}</td>
+                    <td>{{onepaid.amount}}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

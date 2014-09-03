@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo Informática</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="css/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="page-header">
+        <h1> Todo Informática <small>Lo que usted necesita</small></h1>
+    </div>
+    <div >
+    <ul class="nav navbar-nav">
+        <li class="dropdown">
+            <a id="cliente" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Clientes
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="cliente">
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#cliente"> Listar </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#nuevocliente"> Nuevo </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#modcliente"> Modificar </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a id="producto" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Productos
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="producto">
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#producto"> Listar </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#nuevoproducto"> Nuevo </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#modproducto"> Modificar </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a id="proveedores" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Proveedores
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="proveedores">
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#proveedor"> Listar </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#nuevoproveedor"> Nuevo </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#modproveedor"> Modificar </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a id="compra" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Compras
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="compra">
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#compra"> Listar </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#nuevocompra"> Nuevo </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a id="venta" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Venta
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="venta">
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#venta"> Listar </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#nuevoventa"> Nuevo </a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a id="pago" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                Pago
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="pago">
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#pago"> Listar </a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#nuevopago"> Nuevo </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    </div>  
+    <div class="container">
+        <div class="row top-buffer">
+          <div class="col-xs-8 col-xs-offset-2">
+            <div ng-view></div> <!-- This is where our views will load -->
+          </div>
+        </div>
+    </div>   
+  
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/angular/angular-ui-router.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>

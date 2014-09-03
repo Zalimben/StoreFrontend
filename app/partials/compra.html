@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Orden de Compra</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+    <div>
+        <h2> Lista de Compras </h2>
+            Filtrar:  <input type="text" ng-model="purchasefilter"/> 
+        <br> <br>
+        <table  class="table" >
+        <tr>
+            <th>Id</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+        </tr>
+        <tr ng-repeat="onepurchase in allpurchase | filter: purchasefilter" 
+            ng-click="showSelectedElement(onepurchase)"
+            ng-class-even="'even'"
+            ng-class-odd="'odd'"
+            >
+            <td>{{onepurchase.orderNum}}</td>
+            <td>{{onepurchase.productId.description}}</td>
+            <td>{{onepurchase.quantity}}</td>
+        </tr>
+        </table>
+        </div>
+    </body>
+</html>      

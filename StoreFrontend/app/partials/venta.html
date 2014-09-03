@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Orden de Venta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        <script>
+        $(function() {
+          $( "#datepicker" ).datepicker();
+        });
+        </script>
+        
+    </head>
+    <body>
+    <div>
+        <h2> Lista de Ventas </h2>
+            Filtrar:  <input type="text" ng-model="salesfilter"/>
+            <br> <br>
+        <table  class="table" >
+        <tr>
+            <th>Id</th>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+        </tr>
+        <tr ng-repeat="onesale in allsales | filter: salesfilter" 
+            ng-click="showSelectedElement(onesale)"
+            ng-class-even="'even'"
+            ng-class-odd="'odd'"
+            >
+            <td>{{onesale.orderNum}}</td>
+            <td>{{onesale.customerId.name}}</td>
+            <td>{{onesale.productId.description}}</td>
+            <td>{{onesale.quantity}}</td>
+        </tr>
+        </table>
+        </div>
+    </body>
+</html>

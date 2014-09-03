@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Productos</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+    <h2> Productos </h2>
+    <p>
+        Filtrar:  <input type="text" ng-model="productfilter"/>
+    </p>
+
+    <table class="table" >
+        <tr>
+            <th>Id</th>
+            <th>Descripción</th>
+            <th>Proveedor </th>
+            <th>Precio</th>
+        </tr>
+        <tr ng-repeat="oneproduct in allproducts | filter:productfilter" 
+            ng-class-even="'even'"
+            ng-class-odd="'odd'"
+            >
+            <td>{{oneproduct.productId}}</td>
+            <td>{{oneproduct.description}}</td>
+            <td>{{oneproduct.manufacturerId.name}}</td>
+            <td>{{oneproduct.purchaseCost}}</td>
+        </tr>
+    </table>
+</body>
+</html>
